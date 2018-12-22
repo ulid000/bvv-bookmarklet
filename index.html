@@ -2,9 +2,33 @@
 <html lang=en>
     <head>
         <meta charset=utf-8>
-        <title>BVV Bookmarklet</title>
+        <title>BVV Info ganz anzeigen</title>
+        <script lang="text/javascript">
+        //<![CDATA[
+            var bookmarklet = "javascript:(function()%7B%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27body%20.container-wrapper.container-content%20%7B%20overflow:%20auto%20!important;%20%7D%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput%5B0%5D.appendChild(style);%20%7D)();"
+
+            // based on https://gist.github.com/Chalarangelo/4ff1e8c0ec03d9294628efbae49216db
+            const copyToClipboard = str => {
+                const el = document.createElement('textarea'); 
+                el.value = str;                                 
+                el.setAttribute('readonly', '');                
+                el.style.position = 'absolute';                 
+                el.style.left = '-9999px';                      
+                document.body.appendChild(el);                  
+                el.select();  
+                document.execCommand('copy');
+                document.body.removeChild(el);
+            };
+
+        //]]>
+        </script>
 </head>
 <body>
+    <h2>Hinzufügen zu Lesezeichen per Drag & Drop (Desktop Browser)</h2>
     <p><a href="javascript:(function()%7B%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27body%20.container-wrapper.container-content%20%7B%20overflow:%20auto%20!important;%20%7D%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput%5B0%5D.appendChild(style);%20%7D)();">BVV Info ganz anzeigen</a></p>
+    <h2>Hinzufügen in mobilen Browsern</h2>
+    <p>TODO</p>
+    <p><a href="javascript:(copyToClipboard(bookmarklet))">Bookmarklet kopieren</a></p>
+    <p>TODO</p>
 </body>
 </html>
