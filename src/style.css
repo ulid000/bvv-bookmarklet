@@ -1,0 +1,7 @@
+body {
+  background-color: lightblue;
+}
+
+body .container-wrapper.container-content {
+    overflow: auto !important;
+}
