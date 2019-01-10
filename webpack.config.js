@@ -1,11 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
 const AssetToBookmarkletPlugin = require('./plugins/AssetToBookmarkletPlugin.js');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   entry: {
+    bvvbookmarklet: './src/bookmarklet.js',
     index: './src/index.js'
   },
   output: {
@@ -29,6 +30,12 @@ module.exports = {
     }]
   },
   plugins: [
-    new AssetToBookmarkletPlugin()
+    new AssetToBookmarkletPlugin({
+      chunks: ['bvvbookmarklet']
+    }),
+    new HtmlWebpackPlugin({
+      excludeChunks: ['bvvbookmarklet'],
+      template: './src/index.html'
+    })
   ]
 };
