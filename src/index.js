@@ -1,4 +1,7 @@
-    var add = document.createElement("a");
-    add.href = "javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='bookmarklet.js';document.body.appendChild(s);})()";
-    add.innerHTML = "Click me now";
-    document.body.appendChild(add);
+function addScript(codeURL) {
+    var scriptElement = document.createElement('script');
+    scriptElement.setAttribute('src', codeURL);
+    scriptElement.setAttribute('crossorigin', "anonymous");
+    document.body.appendChild(scriptElement);
+}
+addScript('https://ulid000.github.io/bvv-bookmarklet/dist/bookmarklet.js');
