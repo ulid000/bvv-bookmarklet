@@ -31,10 +31,10 @@ module.exports = {
   },
   plugins: [
     new AssetToBookmarkletPlugin({
-      chunks: ['bvvbookmarklet']
+      chunks: ['nochunk']
     }),
     new HtmlWebpackPlugin({
-      excludeChunks: ['bvvbookmarklet'],
+      excludeChunks: ['nochunk'],
       template: './src/index.html'
     })
   ]
