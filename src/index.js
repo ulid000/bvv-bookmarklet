@@ -21,8 +21,9 @@ const copyToClipboard = str => {
     document.body.removeChild(el);
 };
 
-var bookmarkletcopy = document.getElementById('bookmarkletcopy');
-bookmarkletcopy.href = "javascript:copyToClipboard(" + bvvbookmarklet + ")";
-
 var bookmarkletlink = document.getElementById('bookmarkletlink')
 bookmarkletlink.href = bvvbookmarklet;
+
+var bookmarkletcopy = document.getElementById('bookmarkletcopy');
+bookmarkletcopy.href = "javascript:copyToClipboard(document.getElementById('bookmarkletlink').href)";
+
