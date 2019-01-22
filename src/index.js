@@ -22,7 +22,7 @@ const copyToClipboard = str => {
 };
 
 var bookmarkletcopy = document.getElementById('bookmarkletcopy');
-bookmarkletcopy.href = "javascript:copyToClipboard(" + bookmarklet + ")";
+bookmarkletcopy.href = "javascript:copyToClipboard(" + bvvbookmarklet + ")";
 
 var bookmarkletlink = document.getElementById('bookmarkletlink')
 bookmarkletlink.href = bvvbookmarklet;
