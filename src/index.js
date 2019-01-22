@@ -24,6 +24,7 @@ const copyToClipboard = str => {
 var bookmarkletlink = document.getElementById('bookmarkletlink')
 bookmarkletlink.href = bvvbookmarklet;
 
+// FIXME: export copyToClipboard to library
 var bookmarkletcopy = document.getElementById('bookmarkletcopy');
 bookmarkletcopy.href = "javascript:copyToClipboard(document.getElementById('bookmarkletlink').href)";
 
