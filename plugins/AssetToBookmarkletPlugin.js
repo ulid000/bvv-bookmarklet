@@ -20,8 +20,8 @@ class AssetToBookmarkletPlugin {
               source: function () {
                 // Encode and wrap the original source to make it bookmark-ready.
                 return 'javascript:' + encodeURIComponent('(function(){' + asset.source() + '})()');
-              },
-              size: asset.size
+              } ,
+              size: function() {return this.source().size}
             }
           });
         }

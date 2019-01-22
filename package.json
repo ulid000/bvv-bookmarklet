@@ -2,7 +2,7 @@
   "name": "bvv-bookmarklet",
   "version": "0.1.0",
   "description": "BVV Bookmarklet",
-  "main": "",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,20 @@
   "author": "Ulrich Deiters",
   "license": "MIT",
   "devDependencies": {
+    "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^1.0.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0"
-  }
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulid000/bvv-bookmarklet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ulid000/bvv-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/ulid000/bvv-bookmarklet#readme"
 }
