@@ -3,7 +3,7 @@ import bvvbookmarklet from '../dist_bookmarklet/bvvbookmarklet.bookmarklet';
 // based on https://gist.github.com/Chalarangelo/4ff1e8c0ec03d9294628efbae49216db
 // and https://stackoverflow.com/a/34046084
 // TODO: differ between iOS and Android if needed
-export function copyToClipboard = str => {
+export function copyToClipboard(str) {
     const el = document.createElement('textarea');
     el.value = str;
     el.readonly = false; // needed on iOS 
