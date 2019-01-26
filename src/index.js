@@ -9,7 +9,7 @@ export function copyToClipboard(str) {
     el.readonly = false; // needed on iOS 
     el.contenteditable = true; // needed on iOS    
     el.style.position = 'absolute';
-    el.style.left = '-9999px';
+    // el.style.left = '-9999px';
     document.body.appendChild(el);
     var range = document.createRange();
     range.selectNodeContents(el);
@@ -20,7 +20,7 @@ export function copyToClipboard(str) {
     el.setSelectionRange(0, 999999);
     console.log(s);
     document.execCommand('copy');
-    document.body.removeChild(el);
+    // document.body.removeChild(el);
 };
 
 var bookmarkletlink = document.getElementById('bookmarkletlink')
