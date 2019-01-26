@@ -9,18 +9,18 @@ export function copyToClipboard(str) {
     el.readonly = false; // needed on iOS 
     el.contenteditable = true; // needed on iOS    
     el.style.position = 'absolute';
-    // el.style.left = '-9999px';
+    el.style.left = '-9999px';
     document.body.appendChild(el);
     var range = document.createRange();
     range.selectNodeContents(el);
-    console.log(range);
+    // console.log(range);
     var s = window.getSelection();
     s.removeAllRanges();
     s.addRange(range);
     el.setSelectionRange(0, 999999);
-    console.log(s);
+    // console.log(s);
     document.execCommand('copy');
-    // document.body.removeChild(el);
+    document.body.removeChild(el);
 };
 
 var bookmarkletlink = document.getElementById('bookmarkletlink')
@@ -28,7 +28,7 @@ bookmarkletlink.href = bvvbookmarklet;
 
 // FIXME: export copyToClipboard to library
 var bookmarkletcopy = document.getElementById('bookmarkletcopy');
-bookmarkletcopy.href = "javascript:copyToClipboard(document.getElementById('bookmarkletlink').href)";
+bookmarkletcopy.href = "javascript:clipboard.copyToClipboard(document.getElementById('bookmarkletlink').href)";
 
 
 
