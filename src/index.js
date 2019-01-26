@@ -13,10 +13,12 @@ export function copyToClipboard(str) {
     document.body.appendChild(el);
     var range = document.createRange();
     range.selectNodeContents(el);
+    console.log(range);
     var s = window.getSelection();
     s.removeAllRanges();
     s.addRange(range);
     el.setSelectionRange(0, 999999);
+    console.log(s);
     document.execCommand('copy');
     document.body.removeChild(el);
 };
