@@ -4,14 +4,14 @@ import bvvbookmarklet from '../dist_bookmarklet/bvvbookmarklet.bookmarklet';
 // and https://stackoverflow.com/a/34046084
 // TODO: differ between iOS and Android if needed
 export function copyToClipboard(str) {
-    const el = document.createElement('textarea');
+    var el = document.createElement('textarea');
     el.value = str;
     el.readonly = false; // needed on iOS 
     el.contenteditable = true; // needed on iOS    
     el.style.position = 'absolute';
     el.style.left = '-9999px';
     document.body.appendChild(el);
-    range = document.createRange();
+    var range = document.createRange();
     range.selectNodeContents(el);
     var s = window.getSelection();
     s.removeAllRanges();
