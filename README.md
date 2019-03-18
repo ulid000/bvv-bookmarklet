@@ -11,7 +11,7 @@ Beispiel: [BVV Charlottenburg-Wilmersdorf](https://www.berlin.de/ba-charlottenbu
 
 ## Installation
 
-Die Installatoon kann über [http://github.io/bvv-bookmarklet]() erfolgen.
+Die Installatoon kann über [http://ulid000.github.io/bvv-bookmarklet/dist]() erfolgen.
 
 ## Nutzung
 
