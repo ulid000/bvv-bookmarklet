@@ -17,7 +17,7 @@ Damit es auch schon vorher möglich ist, zumindest rudimentär mit Smartphones z
 
 ### Installation
 
-Die Installatoon kann über [https://ulid000.github.io/bvv-bookmarklet/dist]() erfolgen.
+Die Installation kann über [https://ulid000.github.io/bvv-bookmarklet/dist](https://ulid000.github.io/bvv-bookmarklet/dist) erfolgen.
 
 ### Nutzung
 
