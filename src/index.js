@@ -18,11 +18,11 @@ export function copyToClipboard(str) {
     s.removeAllRanges();
     s.addRange(range);
     el.setSelectionRange(0, 999999);
-    // console.log(s);
+    console.log(s);
     try {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Cutting text command was ' + msg);
+        console.log('Copying text command was ' + msg);
       } catch(err) {
         console.log('Oops, unable to copy ' + err);
       }
