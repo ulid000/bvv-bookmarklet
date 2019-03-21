@@ -19,7 +19,13 @@ export function copyToClipboard(str) {
     s.addRange(range);
     el.setSelectionRange(0, 999999);
     // console.log(s);
-    document.execCommand('copy');
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Cutting text command was ' + msg);
+      } catch(err) {
+        console.log('Oops, unable to copy ' + err);
+      }
     document.body.removeChild(el);
 };
 
