@@ -13,7 +13,8 @@ export function copyToClipboard(str) {
     document.body.appendChild(el);
     var range = document.createRange();
     range.selectNodeContents(el);
-    // console.log(range);
+    console.log(el.value);
+    console.log(range);
     var s = window.getSelection();
     s.removeAllRanges();
     s.addRange(range);
